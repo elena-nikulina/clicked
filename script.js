@@ -3,6 +3,7 @@ let textInput = document.querySelector('#text');
 let square = document.querySelector('#square');
 let eBtn = document.querySelector('#e_btn');
 let range = document.querySelector('#range');
+let rangeSpan = document.querySelector('#range-span');
 let circle = document.querySelector('#circle');
 
 btn.addEventListener('click', function() {
@@ -12,10 +13,18 @@ btn.addEventListener('click', function() {
 });
 
 eBtn.style.display = 'none';
+rangeSpan.textContent = 150;
 
 range.addEventListener('input', function() {
     circle.style.width = (150*range.value/100) + '%';
     circle.style.height = (150*range.value/100) + '%';
+    if ((circle.style.width) > 100 + '%') {
+        circle.style.width=100 + '%';
+    }
+    if (circle.style.height > 100 + '%') {
+        circle.style.height=100 + '%';
+    }
+
 });
 
 
