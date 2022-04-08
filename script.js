@@ -18,13 +18,8 @@ rangeSpan.textContent = 150;
 range.addEventListener('input', function() {
     circle.style.width = (150*range.value/100) + '%';
     circle.style.height = (150*range.value/100) + '%';
-    if ((circle.style.width) > 100 + '%') {
-        circle.style.width=100 + '%';
-    }
-    if (circle.style.height > 100 + '%') {
-        circle.style.height=100 + '%';
-    }
-
+    circle.style.maxWidth = '100%';
+    circle.style.maxHeight = '100%';
 });
 
 
