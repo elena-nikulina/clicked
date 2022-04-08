@@ -13,13 +13,14 @@ btn.addEventListener('click', function() {
 });
 
 eBtn.style.display = 'none';
-rangeSpan.textContent = 150;
+rangeSpan.textContent = 50 + '%';
 
 range.addEventListener('input', function() {
     circle.style.width = (150*range.value/100) + '%';
     circle.style.height = (150*range.value/100) + '%';
     circle.style.maxWidth = '100%';
     circle.style.maxHeight = '100%';
+    rangeSpan.textContent = (150*range.value/100) + '%';
 });
 
 
